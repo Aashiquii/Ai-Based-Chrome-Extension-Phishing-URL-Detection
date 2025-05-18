@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberShield: Phishing URL Detector</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cyber-container futuristic-glow">
+    <header>
+      <h1><i class="fas fa-shield-alt"></i> CyberShield</h1>
+      <p>Phishing URL Detection System</p>
+    </header>
+    <main>
+      <div class="input-group">
+        <input
+          type="text"
+          id="urlInput"
+          placeholder="Enter URL (e.g., https://example.com)"
+          autofocus
+          aria-label="URL input for phishing detection"
+          class="futuristic-input"
+        />
+        <button id="analyzeBtn" title="Check URL (Ctrl + Enter)" class="futuristic-button pulse">
+          <i class="fas fa-bolt"></i> Analyze
+        </button>
+      </div>
+      <div id="loading" class="hidden futuristic-loading">
+        <i class="fas fa-spinner fa-spin"></i> Scanning...
+      </div>
+      <div id="result" role="alert" class="futuristic-result"></div>
+      <div id="risk-score" class="hidden futuristic-score">
+        <p>Risk Score: <span id="score-value"></span></p>
+        <progress id="progress-bar" max="100" value="0" aria-label="Risk score" class="futuristic-progress"></progress>
+      </div>
+      <button id="exportBtn" class="hidden futuristic-button pulse">Export Report</button>
+      <div class="settings">
+        <label>
+          <input type="checkbox" id="enableApiChecks" checked />
+          <span>Enable API Checks</span>
+        </label>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
